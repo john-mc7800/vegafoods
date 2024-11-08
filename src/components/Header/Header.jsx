@@ -2,7 +2,6 @@ import React from 'react'
 import { FaPhoneAlt } from "react-icons/fa";
 import { SiMinutemailer } from "react-icons/si";
 import Navbar from './Navbar/Navbar';
-import HomePage from '../Home/HomePage';
 
 export default function Header() {
   return (

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Poppins } from 'next/font/google'
-import { HiMenu, HiX } from 'react-icons/hi'
+import { HiMenu} from 'react-icons/hi'
 import { IoMdCart } from 'react-icons/io'
 
 const poppins = Poppins({
@@ -67,11 +67,11 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={`block px-3 py-2  text-base font-medium ${
-                  pathname === item.href ? 'text-white bg-customGreen' : 'text-gray-500 hover:text-white hover:bg-red-500'
+                  pathname === item.href ? 'text-white bg-customGreen' : 'text-gray-500 hover:text-white '
                 }`}
                 onClick={() => setIsOpen(false)}
               >
-                {item.label ? item.label : item.icon}
+                {item.label ? <div className="text-sm">{item.label}</div> : item.icon}
               </Link>
             ))}
           </div>
